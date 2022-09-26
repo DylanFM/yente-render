@@ -28,11 +28,11 @@ services:
   env: docker
   dockerfilePath: ./Dockerfile.yente
   plan: standard
-  autoDeploy: false
   envVars:
     - key: YENTE_ELASTICSEARCH_URL
-      value: http://elasticsearch-yente:9200
+      fromService:
+        type: pserv
+        name: elasticsearch-yente
+        property: connectionString
     - key: YENTE_STATEMENT_API
       value: false
-    - key: YENTE_UPDATE_TOKEN
-      value: yenteupdate
