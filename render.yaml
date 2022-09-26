@@ -35,4 +35,6 @@ services:
         name: elasticsearch-yente
         property: connectionString
     - key: YENTE_STATEMENT_API
-      value: false
+      sync: false
+    - key: YENTE_UPDATE_TOKEN
+      sync: false
