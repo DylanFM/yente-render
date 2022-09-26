@@ -1,1 +1,3 @@
 FROM ghcr.io/opensanctions/yente:latest
+
+COPY . .
