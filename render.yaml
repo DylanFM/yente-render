@@ -33,8 +33,8 @@ services:
       fromService:
         type: pserv
         name: elasticsearch-yente
-        property: connectionString
+        property: hostport
     - key: YENTE_STATEMENT_API
       sync: false
     - key: YENTE_UPDATE_TOKEN
-      sync: false
+      generateValue: true
