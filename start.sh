@@ -1,0 +1,2 @@
+export YENTE_ELASTICSEARCH_URL="http://${YENTE_ELASTICSEARCH_HOSTPORT}"
+yente serve
