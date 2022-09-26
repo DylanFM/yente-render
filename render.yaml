@@ -28,8 +28,12 @@ services:
   env: docker
   dockerfilePath: ./Dockerfile.yente
   plan: standard
+  # TODO hopefully at some point Render will support a placeholder with the connection string including protocol
+  # or allower for concatenation / interpolation with placeholder env vars
+  # Until then we have to interpolate and override the start command
+  startCommand: 'YENTE_ELASTICSEARCH_URL="http://${YENTE_ELASTICSEARCH_HOSTPORT}" yente serve'
   envVars:
-    - key: YENTE_ELASTICSEARCH_URL
+    - key: YENTE_ELASTICSEARCH_HOSTPORT
       fromService:
         type: pserv
         name: elasticsearch-yente
