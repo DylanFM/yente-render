@@ -14,7 +14,7 @@ Render will create the services and Yente will begin importing data. The Yente e
 
 ## Important
 
-At this point in time this requires a [bulk data license](https://www.opensanctions.org/licensing/) from Open Sanctions.
+This requires a [bulk data license](https://www.opensanctions.org/licensing/) from Open Sanctions.
 
 The steps above will incur charges to your Render account.
 
