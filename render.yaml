@@ -28,7 +28,7 @@ services:
   env: docker
   dockerfilePath: ./Dockerfile.yente
   plan: standard
-  dockerCommand: bash start.sh
+  dockerCommand: bash ./start.sh
   envVars:
     - key: YENTE_ELASTICSEARCH_HOSTPORT
       fromService:
